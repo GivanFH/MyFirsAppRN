@@ -1,4 +1,5 @@
-import { StyleSheet } from "react-native";
+/* eslint-disable quotes */
+import { Platform, StyleSheet } from "react-native";
 
 export const globalStyles = StyleSheet.create({
     centerContainer: {
@@ -10,5 +11,11 @@ export const globalStyles = StyleSheet.create({
         fontSize: 80,
         fontWeight: '300',
         color: 'black',
+    },
+    fab: {
+        position: 'absolute',
+        margin: 16,
+        right: 0,
+        bottom: Platform.OS === 'android' ? 15 : 0,
     },
 });

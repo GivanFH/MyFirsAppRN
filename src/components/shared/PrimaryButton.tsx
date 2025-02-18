@@ -1,4 +1,7 @@
-import { Pressable, StyleSheet, Text } from "react-native"
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable react/react-in-jsx-scope */
+// eslint-disable-next-line quotes
+import { Pressable, StyleSheet, Text } from "react-native";
 
 type PrimaryButtonProps = {
     label: string;
@@ -14,13 +17,13 @@ export const PrimaryButton = ({ label, onPress, onLongPress }: PrimaryButtonProp
             onLongPress={() => onLongPress && onLongPress()}
             style={({ pressed }) => [
                 styles.button,
-                pressed && styles.buttonPressed
+                pressed && styles.buttonPressed,
             ]}
         >
             <Text style={{ color: 'white' }}>{label}</Text>
         </Pressable>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
     button: {
